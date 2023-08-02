@@ -1,3 +1,5 @@
+'use strict';
+
 // Alerta de Olá Mundo
 // alert("Olá Mundo");
 
@@ -1089,4 +1091,88 @@ var nome = "Maria";
 
 
 
+// Operador Condicional Ternário (?:.)
+
+// let mensagem;
+// const idade = 19;
+
+// if(idade >= 18){
+//     mensagem = 'Maior de idade';
+// } else {
+//     mensagem = 'Menor de idade';
+// }
+
+// console.log(mensagem);
+
+// sintaxe
+// condicão ? valorSeVerdadeiro : valorSeFalso;
+
+// mensagem = idade >= 18 ? 'Maior de idade' : 'Menor de idade';
+// console.log(mensagem);
+
+
+// const numero = 12;
+// let mensagem = "";
+
+// // if (numero % 2 === 0){
+// //     mensagem = 'é par';
+// // } else {
+// //     mensagem = 'é ímpar';
+// // }
+
+// mensagem = numero % 2 === 0 ? 'é par' : 'é ímpar';
+
+// console.log(mensagem);
+
+// saudacao
+// Bom dia hora < 12
+// Boa tarde 
+
+// let hora = 10;
+// const saudacao = hora < 12 ? 'Bom dia' : 'Boa tarde';
+// console.log(saudacao);
+
+// let idade = 19;
+// // let verificador = idade >= 18 ? 'Maior' : 'Menor';
+// // console.log(`Você é ${verificador} de idade`);
+
+// console.log(`Você é ${idade >= 18 ?'Maior':'Menor'} de idade`);
+
+
+// Desafio 5
+// Venda comissionada
+// A comissão é 5% da venda
+// A menor comissão será de 400
+
+// 40000
+// 80000
+// 100000
+
+// Para um carro que vale 90000.00, a comissão de venda será de 4500.00
+
+// let valorVenda = 25000;
+// let comissao = valorVenda * 0.05;
+
+// console.log(comissao);
+// console.log(
+//     `Para um carro que vale ${valorVenda},
+//     a comissão de venda será de ${ comissao < 400 ? 400 : comissao }`
+// );
+
+
+
+
+// Modo Estrito (strict mode)
+// 'use strict';
+
+let idade = 30;
+let mensagem = "";
+
+if (idade >= 18){
+    mensagem = 'Você é maior de idade';
+} else {
+    mensagem = 'Você é menor de idade';
+}
+
+console.log(mensagem);
 

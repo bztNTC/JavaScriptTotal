@@ -1165,14 +1165,449 @@ var nome = "Maria";
 // Modo Estrito (strict mode)
 // 'use strict';
 
-let idade = 30;
-let mensagem = "";
+// let idade = 30;
+// let mensagem = "";
 
-if (idade >= 18){
-    mensagem = 'Você é maior de idade';
-} else {
-    mensagem = 'Você é menor de idade';
-}
+// if (idade >= 18){
+//     mensagem = 'Você é maior de idade';
+// } else {
+//     mensagem = 'Você é menor de idade';
+// }
 
-console.log(mensagem);
+// console.log(mensagem);
+
+
+// function saudacao(){
+//    console.log('Olá, pessoal!'); 
+// }
+
+// saudacao();
+// saudacao();
+// saudacao();
+
+
+
+// function padaria(farinha, agua){
+//     console.log(farinha,agua);
+//     const pao = `Fizemos pães usando ${farinha} de farinha e ${agua} de água`;
+//     return pao;
+// }
+
+// console.log(padaria(1,2));
+// console.log(padaria(5,8));
+
+
+// // Função de dobro
+// function dobra(valor){
+//     return valor * 2;
+// }
+
+// console.log(dobra(4));
+
+
+// // Função de Soma
+// function soma2numeros(numero1,numero2){
+//     return numero1 + numero2;
+// }
+
+// console.log(soma2numeros(2,4));
+
+
+// Diferença entre
+// Declaração de Função e 
+// Expressão de Função
+
+// // Declaração de Função
+// function saudacao1(nome){
+//     console.log(`Olá, ${nome}`);
+// }
+
+// saudacao1('Maria');
+
+// // Expressão de Função
+// let saudacao2 = function(nome){
+//     console.log(`Olá, ${nome}`);
+// }
+
+// saudacao2('João');
+
+
+// Declaração de função
+// function dobra1(numero){
+//     return numero * 2;
+// }
+
+// console.log(dobra1(3));
+
+
+// // Expressão de função
+// const dobra2 = function(numero){
+//     return numero * 2;
+// }
+// console.log(dobra2(7));
+
+
+
+// Arrow Functions
+
+// // Declarar função "Normal"
+// function saudacao1(nome){
+//     return `Olá, ${nome}`;
+// }
+
+// console.log(saudacao1('João'));
+
+// // Declarar função Arrow
+// const saudacao2 = (nome) =>{
+//     return `Olá, ${nome}`;
+// }
+
+// console.log(saudacao2('Maria'));
+
+// // Declarar função Arrow
+// const saudacao3 = (nome) => `Olá, ${nome}`;
+
+
+// console.log(saudacao3('Jonas'));
+
+
+// // V1
+// function dobro(numero){
+//     return numero * 2;
+// }
+
+
+
+
+
+// v2
+// const dobro = (numero) => numero * 2; 
+// console.log(dobro(25));
+
+
+
+// function soma(a,b){
+//     return a+b;
+// }
+// console.log(soma(2,4));
+
+// const soma2 = (a,b) => a+b;
+
+// console.log(soma2(2,8));
+
+
+// Funções que chamam funções
+
+// function dobro(numero){
+//     return numero * 2;
+// }
+
+// function ehPar(numero){
+//     if (numero % 2 === 0){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// function verificaNumero(numero){
+//     const dobroDoNumero = dobro(numero);
+//     const resultadoPar  = ehPar(numero); 
+
+//     if (resultadoPar){
+//         console.log(`O número ${numero} é par, e seu dobro é ${dobroDoNumero}`);
+//     } else {
+//         console.log(`O número ${numero} é ímpar, e seu dobro é ${dobroDoNumero}`);
+//     }
+
+// }
+
+// verificaNumero(15);
+// verificaNumero(7);
+// verificaNumero(6);
+
+
+// // Funções Recursivas
+// function fatorial(numero){
+//     if (numero === 1){
+//         return 1;
+//     } else {
+//         return numero * fatorial(numero -1)
+//     }
+// }
+// console.log(fatorial(5));
+// // 5 x 4 x 3 x 2 x 1
+
+// console.log(fatorial(4));
+// // 4 x 3 x 2 x 1
+
+// console.log(fatorial(3));
+// // 3 x 2 x 1
+
+// console.log(fatorial(2));
+// // 2 X 1
+
+
+// sequência Fibonacci
+//1 1 2 3 5 8 13 21
+
+// function fibonnacci(n){
+//     if (n <=1){
+//         return n;
+//     } else {
+//         return fibonnacci(n - 1) + fibonnacci(n - 2);
+//     }
+// }
+
+// console.log(fibonnacci(6));
+// console.log(fibonnacci(7));
+// console.log(fibonnacci(8));
+// console.log(fibonnacci(9));
+// console.log(fibonnacci(10));
+
+
+// Revisão de Funções
+
+// Declaração de Função
+// function saudacaoDeclaracao(nome){
+//     return `Olá, ${nome}! Seja bem-vindo(a)`;
+// }
+// let retorno = saudacaoDeclaracao('Jonas');
+// console.log(retorno);
+
+// // Expressão de Função
+// const saudacaoExpressao = function(nome){
+//     return `Olá, ${nome}! Seja bem-vindo(a)`;
+// }
+// let retorno2 = saudacaoExpressao('Maria');
+// console.log(retorno2);
+
+// // Arrow Function
+// const saudacaoArrow = (nome) => `Olá, ${nome}! Seja bem-vindo(a)`;
+// let retorno3 = saudacaoArrow('João');
+// console.log(retorno3);
+
+
+// Desafio 6
+
+// Aqui estão as variáveis que vamos usar:
+
+// porta1: representa a primeira porta, que está fechada. Ela tem o valor false.
+// porta2: representa a segunda porta, também fechada, com o valor false.
+// porta3: a terceira porta, que também está fechada, com o valor false.
+
+// Agora, vamos às instruções para resolver esse desafio:
+
+// Crie uma função chamada abrirPorta1 que mude o valor da variável porta1 para true.
+// Crie uma função chamada abrirPorta2 que mude o valor da variável porta2 para true.
+// Crie uma função chamada abrirPorta3 que mude o valor da variável porta3 para true.
+
+// Crie uma função chamada verificarTesouro 
+// que verifique se todas as portas estão abertas 
+// (ou seja, se todas as variáveis porta1, porta2 e porta3 são true). 
+// Se todas estiverem abertas, a função deve imprimir 
+// "Você encontrou o tesouro! Parabéns!". 
+// Caso contrário, deve imprimir "Continue procurando!".
+
+
+// Desafio 6 - Solução
+
+// Variáveis que representam as portas
+// let porta1 = false; // a primeira porta está fechada
+// let porta2 = false; // a segunda porta está fechada
+// let porta3 = false; // a terceira porta está fechada
+
+// function abrirPorta1(){
+//     porta1 = true;
+// }
+
+// function abrirPorta2(){
+//     porta2 = true;
+// }
+
+// function abrirPorta3(){
+//     porta3 = true;
+// }
+
+// // verificar se todas as portas estão abertas:
+// function verificaPortasAbertas(){
+//     if (porta1 && porta2 && porta3){
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+// // analisa resultado das portas e imprime resultado
+// function analisaResultado(){
+//     if (verificaPortasAbertas()){
+//         console.log('Você encontrou o tesouro! Parabéns!');
+//     } else {
+//         console.log('Continue procurando!');
+//     }
+// }
+
+// abrirPorta1();
+// abrirPorta2();
+// abrirPorta3();
+// analisaResultado();
+
+
+
+// Desafio 7 - Sopa de Switch
+
+// Aqui estão as variáveis que vamos usar no desafio:
+
+// vegetais: valor de 1 a 5 (1 representa poucos vegetais e 5 muitos vegetais)
+// carnes: valor de 1 a 5 (1 representa poucas carnes e 5 muitas carnes)
+// temperos: valor de 1 a 5 (1 representa poucos temperos e 5 muitos temperos)
+
+// A sopa de legumes com carne - vegetais 3 ou mais,  carnes 4 ou mais e temperos
+// A sopa vegetariana: vegetais - 3 ou mais,  sem carnes e temperos
+// A sopa de carne com poucos legumes - vegetais mais que 3, carnes: 3 ou mais e temperos
+
+// Agora, vamos às instruções para resolver esse desafio:
+// Primeiro, você precisa definir as variáveis 
+// "vegetais", "carnes" e "temperos" com os valores 
+// correspondentes à quantidade que você comprou na feira.
+
+// Em seguida, utilize um switch para avaliar essas variáveis
+// e decidir qual tipo de sopa é possível fazer.
+// Dentro de cada caso do switch, 
+// você pode imprimir uma mensagem no console 
+// informando o tipo de sopa que é possível fazer 
+// com base na quantidade de ingredientes.
+
+// Por fim, teste diferentes combinações de valores 
+// para as variáveis e veja qual tipo de sopa
+// é possível fazer em cada caso.
+
+
+// Desafio 7 - Sopa de Switch - Solução
+
+// // Definindo as variáveis
+// const vegetais = 3; // Quantidade de vegetais compradas na feira
+// const carnes = 3; // Quantidade de carnes comprada na feira
+// const temperos = 1; // Quantidade de temperos comprados na feira
+
+// // Utilizando o switch para decidir o tipo de sopa
+// switch (true){
+//     case vegetais >= 3 && carnes >= 4 && temperos >= 1:
+//         console.log("Você pode fazer uma sopa de legumes com carne");
+//         break;
+//     case vegetais >= 3 && carnes == 0 && temperos >= 1:
+//         console.log("Você pode fazer uma sopa vegetariana");
+//         break;
+//     case vegetais >= 3 && carnes >= 3 && temperos >=1:
+//         console.log("Você pode fazer uma sopa de carne com poucos legumes");
+//         break;
+//     default:
+//         console.log("Você não comprou ingredientes suficientes para uma sopa");
+// }
+
+
+
+// // Arrays
+// const nomes = ["Ana","João","Maria"];
+
+// console.log(nomes);
+
+// console.log(nomes[1]);
+
+// // Tipos de dados
+// const idades = [12,18,25];
+// console.log(idades);
+
+// // Array mista
+// const pessoa = [
+//     "Maria",
+//     35,
+//     function(){
+//         console.log('Olá');
+//     }
+// ];
+// console.log(pessoa);
+
+// Estados brasileiros
+// const estados=["AC","AL","AP","AM"];
+
+
+// Funções com Arrays
+// Push - UnShift - Pop - Shift - IndexOf - Includes
+
+// const frutas = ["Maça", "Banana","Laranja"];
+// console.log(frutas);
+
+
+// // Adicionar Morango
+// frutas.push("Morango"); // No final
+// console.log(frutas);
+
+// // Adicionar Limão
+// frutas.unshift("Limão"); // No início
+// console.log(frutas);
+
+// frutas.pop(); // Remove o último elemento
+// console.log(frutas); 
+
+// frutas.shift();// Remove o primeiro elemento
+// console.log(frutas);
+
+// console.log(frutas.indexOf('banana'));
+// // Retorna o índice ou -1 caso não encontre
+
+// console.log(frutas.includes('Limão'));
+// // Retorna se encontrou ou não
+
+// Estados da região SUL
+// const estadosDoSul = ["RS","SC","PR"];
+// let estadoFornecido = "MT";
+
+// if (estadosDoSul.includes(estadoFornecido)){
+//     console.log('Encontrado');
+// } else {
+//     console.log('Não encontrado');
+// }
+
+
+// Desafio 8 - Array de chaves
+
+// Aqui estão as variáveis que vocês vão utilizar para resolver esse desafio:
+
+// A array chaves é onde vamos armazenar as chaves
+// que o personagem coleta ao longo do jogo.
+
+// Agora, vamos às instruções para resolver o desafio:
+
+// Comecem criando uma array vazia chamada chaves.
+// Agora, vamos adicionar algumas chaves à array.
+// Vocês decidem quantas chaves querem adicionar!
+
+// Próximo passo: o personagem vai se deparar com uma porta misteriosa
+// e precisa verificar se ele tem a chave correta para abri-la.
+
+// Se possui a chave, exibam a mensagem 
+// "Você encontrou a chave certa! A porta está aberta!".
+// Caso contrário, exibam a mensagem
+// "Essa chave não abre a porta. Continue procurando!".
+
+// let chaves = [];
+
+// // Adicionar chaves
+// chaves.push("chave 1");
+// chaves.push("chave vervemlha");
+// chaves.push("chave XYZ");
+
+// console.log(chaves);
+
+// // Define a porta misteriosa
+// const portaMisteriosa = "chave 2";
+
+// // Procurar a chave
+
+// if (chaves.includes(portaMisteriosa)){
+//     console.log("Você encontrou a chave certa! A porta está aberta!");
+// } else {
+//     console.log("Essa chave não abre a porta. Continue procurando!");
+// }
 

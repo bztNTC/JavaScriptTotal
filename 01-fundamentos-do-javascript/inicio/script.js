@@ -1611,3 +1611,594 @@ var nome = "Maria";
 //     console.log("Essa chave não abre a porta. Continue procurando!");
 // }
 
+// Números por extenso (de 0 a 19) com Arrays
+// function numeroPorExtenso(numero){
+//     if(numero < 0 || numero > 19){
+//         return " - - - ";
+//     }
+//     const extenso = [];
+//     extenso[0] = "zero";
+//     extenso[1] = "um";
+//     extenso[2] = "dois";
+//     extenso[3] = "três";
+//     extenso[4] = "quatro";
+//     extenso[5] = "cinco";
+//     extenso[6] = "seis";
+//     extenso[7] = "sete";
+//     extenso[8] = "oito";
+//     extenso[9] = "nove";
+//     extenso[10] = "dez";
+//     extenso[11] = "onze";
+//     extenso[12] = "doze";
+//     extenso[13] = "treze";
+//     extenso[14] = "quatorze";
+//     extenso[15] = "quinze";
+//     extenso[16] = "dezesseis";
+//     extenso[17] = "dezessete";
+//     extenso[18] = "dezoito";
+//     extenso[19] = "dezenove";
+
+//     return extenso[numero];
+// }
+
+// console.log(numeroPorExtenso(19));
+
+
+// Desafio 9
+// Números por extenso de 0 a 100
+
+// // Números por extenso (de 0 a 100) com Arrays
+// function numeroPorExtenso(numero){
+//     if(numero < 0 || numero > 100){
+//         return " - - - ";
+//     }
+//     const extenso = [];
+//     extenso[0] = "zero";
+//     extenso[1] = "um";
+//     extenso[2] = "dois";
+//     extenso[3] = "três";
+//     extenso[4] = "quatro";
+//     extenso[5] = "cinco";
+//     extenso[6] = "seis";
+//     extenso[7] = "sete";
+//     extenso[8] = "oito";
+//     extenso[9] = "nove";
+//     extenso[10] = "dez";
+//     extenso[11] = "onze";
+//     extenso[12] = "doze";
+//     extenso[13] = "treze";
+//     extenso[14] = "quatorze";
+//     extenso[15] = "quinze";
+//     extenso[16] = "dezesseis";
+//     extenso[17] = "dezessete";
+//     extenso[18] = "dezoito";
+//     extenso[19] = "dezenove";
+
+
+//     if (numero > 0  && numero <=19 ){
+//         return extenso[numero];
+//     }
+
+//     const dezenaExtenso = [];
+//     dezenaExtenso[2] = "vinte";
+//     dezenaExtenso[3] = "trinta";
+//     dezenaExtenso[4] = "quarenta";
+//     dezenaExtenso[5] = "cinquenta";
+//     dezenaExtenso[6] = "sessenta";
+//     dezenaExtenso[7] = "setenta";
+//     dezenaExtenso[8] = "oitenta";
+//     dezenaExtenso[9] = "noventa";
+   
+
+//     let unidade = numero % 10;
+//     let dezena = numero - unidade;
+//     dezena = dezena/10;
+//     //console.log(numero, unidade, dezena);
+//     //console.log(numero, extenso[unidade], dezenaExtenso[dezena]);
+
+//     if (unidade === 0){
+//         return dezenaExtenso[dezena];
+//     }
+
+//     return `${dezenaExtenso[dezena]} e ${extenso[unidade]}`;
+
+// }
+
+// console.log(numeroPorExtenso(19));
+// console.log(numeroPorExtenso(37));
+// console.log(numeroPorExtenso(78));
+// console.log(numeroPorExtenso(40));
+
+// Desafio 10
+// Montar o código que retorna números por extenso até 1000
+
+// function numeroPorExtenso(numero){
+//     if(numero < 0 || numero > 1000){
+//         return " - - - ";
+//     }
+
+//     if (numero === 100){
+//         return 'cem';
+//     }
+
+//     if (numero === 1000){
+//         return 'mil';
+//     }
+
+//     const extenso = [];
+//     extenso[0] = "zero";
+//     extenso[1] = "um";
+//     extenso[2] = "dois";
+//     extenso[3] = "três";
+//     extenso[4] = "quatro";
+//     extenso[5] = "cinco";
+//     extenso[6] = "seis";
+//     extenso[7] = "sete";
+//     extenso[8] = "oito";
+//     extenso[9] = "nove";
+//     extenso[10] = "dez";
+//     extenso[11] = "onze";
+//     extenso[12] = "doze";
+//     extenso[13] = "treze";
+//     extenso[14] = "quatorze";
+//     extenso[15] = "quinze";
+//     extenso[16] = "dezesseis";
+//     extenso[17] = "dezessete";
+//     extenso[18] = "dezoito";
+//     extenso[19] = "dezenove";
+
+
+//     if (numero > 0  && numero <=19 ){
+//         return extenso[numero];
+//     }
+
+//     const dezenaExtenso = [];
+//     dezenaExtenso[2] = "vinte";
+//     dezenaExtenso[3] = "trinta";
+//     dezenaExtenso[4] = "quarenta";
+//     dezenaExtenso[5] = "cinquenta";
+//     dezenaExtenso[6] = "sessenta";
+//     dezenaExtenso[7] = "setenta";
+//     dezenaExtenso[8] = "oitenta";
+//     dezenaExtenso[9] = "noventa";
+
+//     const centenaExtenso = [];
+//     centenaExtenso[1] = "cento";
+//     centenaExtenso[2] = "duzentos";
+//     centenaExtenso[3] = "trezentos";
+//     centenaExtenso[4] = "quatrocentos";
+//     centenaExtenso[5] = "quinhentos";
+//     centenaExtenso[6] = "seiscentos";
+//     centenaExtenso[7] = "setecentos";
+//     centenaExtenso[8] = "oitocentos";
+//     centenaExtenso[9] = "novecentos";
+   
+
+//     // definir a unidade
+//     let unidade = numero % 10;
+
+//     // definir a centena
+//     let resto = numero % 100;
+//     let centena = numero - resto;
+//     centena = centena / 100;
+
+//     // definir dezena
+//     let dezena = numero - (centena*100) - unidade;
+//     dezena = dezena/10; 
+
+//     //console.log(unidade, dezena, centena);
+
+//     if (centena > 0 && dezena === 0  && unidade > 0){
+//         return `${centenaExtenso[centena]} e ${extenso[unidade]}`;
+//     }
+
+//     if (centena === 0 && dezena > 0  && unidade > 0){
+//         return `${dezenaExtenso[dezena]} e ${extenso[unidade]}`;
+//     }
+
+//     if (centena === 0 && unidade === 0){
+//         return dezenaExtenso[dezena];
+//     }
+
+//     if (unidade === 0){
+//         return `${centenaExtenso[centena]} e ${dezenaExtenso[dezena]}`;
+//     }
+
+//     return `${centenaExtenso[centena]} e ${dezenaExtenso[dezena]} e ${extenso[unidade]}`;
+
+// }
+
+// console.log(numeroPorExtenso(1000));
+// console.log(numeroPorExtenso(100));
+// console.log(numeroPorExtenso(99));
+// console.log(numeroPorExtenso(401));
+// console.log(numeroPorExtenso(785));
+// console.log(numeroPorExtenso(340));
+// console.log(numeroPorExtenso(444));
+
+
+// Desafio 10
+// Montar o código que retorna números por extenso até 1000
+
+// function unidadePorExtenso(numero){
+//     if (numero < 0 ){
+//         return 'Numero menor que zero';
+//     }
+
+//     if (numero > 9){
+//         return 'Numero maior que nove';
+//     }
+
+//     const extenso = [];
+//     extenso[0] = "zero";
+//     extenso[1] = "um";
+//     extenso[2] = "dois";
+//     extenso[3] = "três";
+//     extenso[4] = "quatro";
+//     extenso[5] = "cinco";
+//     extenso[6] = "seis";
+//     extenso[7] = "sete";
+//     extenso[8] = "oito";
+//     extenso[9] = "nove";
+
+
+//     return extenso[numero];
+// }
+
+
+// function dezenaPorExtenso(numero){
+
+//     if (numero < 0 ){
+//         return 'Numero menor que zero';
+//     }    
+
+//     if (numero > 99){
+//         return 'Numero maior que noventa e nove';
+//     }
+
+//     const extenso = [];
+//     extenso[10] = "dez";
+//     extenso[11] = "onze";
+//     extenso[12] = "doze";
+//     extenso[13] = "treze";
+//     extenso[14] = "quatorze";
+//     extenso[15] = "quinze";
+//     extenso[16] = "dezesseis";
+//     extenso[17] = "dezessete";
+//     extenso[18] = "dezoito";
+//     extenso[19] = "dezenove";
+
+//     const dezenaExtenso = [];
+//     dezenaExtenso[2] = "vinte";
+//     dezenaExtenso[3] = "trinta";
+//     dezenaExtenso[4] = "quarenta";
+//     dezenaExtenso[5] = "cinquenta";
+//     dezenaExtenso[6] = "sessenta";
+//     dezenaExtenso[7] = "setenta";
+//     dezenaExtenso[8] = "oitenta";
+//     dezenaExtenso[9] = "noventa";
+
+//     if (numero < 10){
+//         return unidadePorExtenso(numero);
+//     }
+
+//     if (numero > 10  && numero < 20){
+//         return extenso[numero];
+//     }
+
+//     // calcular a unidade
+//     let unidade = numero % 10;
+//     let dezena = numero - unidade;
+//     dezena = dezena / 10;
+
+//     if (unidade === 0){
+//         return dezenaExtenso[dezena];
+//     }
+
+//     return `${dezenaExtenso[dezena]} e ${unidadePorExtenso(unidade)} `;
+
+// }
+
+
+
+// function centenaPorExtenso(numero){
+//     if (numero > 999){
+//         return "numero acima de 999";
+//     }
+
+//     if (numero < 100){
+//         return dezenaPorExtenso(numero);
+//     }
+
+//     if (numero === 100){
+//         return 'cem';
+//     }
+
+//     const centenaExtenso = [];
+//     centenaExtenso[1] = "cento";
+//     centenaExtenso[2] = "duzentos";
+//     centenaExtenso[3] = "trezentos";
+//     centenaExtenso[4] = "quatrocentos";
+//     centenaExtenso[5] = "quinhentos";
+//     centenaExtenso[6] = "seiscentos";
+//     centenaExtenso[7] = "setecentos";
+//     centenaExtenso[8] = "oitocentos";
+//     centenaExtenso[9] = "novecentos";
+
+//     // calcular a centena
+//     let resto = numero % 100;
+//     let centena = numero - resto;
+//     centena = centena / 100;
+
+//     if (resto === 0){
+//         return centenaExtenso[centena];
+//     }
+
+//     return `${centenaExtenso[centena]} e ${dezenaPorExtenso(resto)}`;
+
+// }
+
+// function numeroPorExtenso(numero){ // 123456
+
+//     if (numero > 999999){
+//         return 'numero muito alto';
+//     }
+
+//     if (numero < 1000){
+//         return centenaPorExtenso(numero);
+//     }
+
+//     if (numero === 1000){
+//         return 'mil';
+//     }
+
+//     let primeiraCentena = numero % 1000; // 123456 % 1000 = 456
+//     let segundaCentena = numero - primeiraCentena;// 123456 - 456 = 123000
+//     segundaCentena = segundaCentena / 1000; // 123000 / 1000 = 123
+
+//     if (primeiraCentena === 0){
+//         return `${centenaPorExtenso(segundaCentena)} mil`;
+//     }
+
+//     return `${centenaPorExtenso(segundaCentena)} mil e ${centenaPorExtenso(primeiraCentena)} `;
+// }
+
+
+// console.log(numeroPorExtenso(0));
+// console.log(numeroPorExtenso(9));
+// console.log(numeroPorExtenso(13));
+// console.log(numeroPorExtenso(234));
+// console.log(numeroPorExtenso(40000));
+// console.log(numeroPorExtenso(444444));
+// console.log(numeroPorExtenso(1000));
+// console.log(numeroPorExtenso(123456));
+
+
+
+
+
+
+
+// Objetos
+
+// // Exemplo de Array
+// const camisetas = ["Vermelha","Azul","Amarela"];
+// camisetas[4] = "Verde";
+// console.log(camisetas);
+
+// // Exemplo de objeto
+// const pessoa = {
+//     nome:'João',
+//     idade:25,
+//     profissao:'engenheiro'
+// };
+
+// pessoa.sobrenome = "Silva";
+// pessoa.nome = "Pedro";
+
+// console.log(pessoa);
+// console.log(pessoa.nome);
+// console.log(pessoa['nome']);
+
+// const carroArray = ["Vermelho","Sedan", 2024];
+// carroArray[3]="WV";
+
+// const carroObjeto = {
+//     cor: 'Vermelho',
+//     modelo: 'Sedan',
+//     ano: 2024
+// }
+
+// carroObjeto.marca = "WV";
+
+// console.log(carroArray);
+// console.log(carroObjeto);
+
+
+// Objeto: ponto ou colchete
+
+// const pessoa = {
+//     primeiroNome: 'João',
+//     idade: 25,
+//     cidade: 'São Paulo'
+// };
+
+// // Se os campos tivem espaço, precisamos de colchetes
+// // Objetos possuem propriedades
+
+// console.log(pessoa.primeiroNome);
+
+
+// let valor = 'cidade';
+// console.log(pessoa[valor]);
+
+
+
+
+
+// O Objeto Math
+
+// const base = 2;
+// const expoente = 3;
+// const resultado = Math.pow(base,expoente);
+
+// console.log(resultado);
+
+// const numero = 16;
+// const raizQuadrada = Math.sqrt(numero);
+// console.log(raizQuadrada);
+
+// Arredondar
+
+// let numero = 123456;
+// let part1 = Math.ceil(123456 / 1000);
+// let part2 = Math.floor(123456 / 1000);
+// console.log(part1,part2);
+// Math.ceil
+// Math.floor
+
+// Valor Absoluto
+// let numero = -5;
+// console.log(numero);
+// console.log(Math.abs(numero));
+
+
+
+
+
+
+// Métodos dos Objetos
+
+// const pessoa = {
+//     nome: 'João',
+//     idade: 25,
+//     saudacao: function(nomeDePessoa){
+//         console.log(this);
+//         console.log(`Meu nome é ${this.nome} e tenho ${this.idade} anos`);
+//         console.log(`Olá, ${nomeDePessoa}. Tudo bem?`);
+//     }
+// }
+// // this
+// console.log(pessoa);
+// pessoa.saudacao('Jonas');
+
+// const circulo = {
+//     raio: 5,
+//     area: 0,
+//     calcularArea: function(){
+//         console.log(this);
+//         this.area = Math.PI * this.raio ** 2;
+//         return this.area;
+//     }
+// }
+
+// console.log(circulo.calcularArea());
+// console.log(circulo.area);
+
+
+
+
+
+// Desafio 11 - Objetos e RPG
+
+
+
+// jogador1:
+//     nome: "Gandalf"
+//     ataque: 130
+//     nivel: 50
+//     classe: "Mago"
+//     vida: 100
+// jogador2:
+//     nome: "Legolas"
+//     ataque: 12
+//     nivel: 45
+//     classe: "Arqueiro"
+//     vida: 80
+// jogador3:
+//     nome: "Aragorn"
+//     ataque: 40
+//     nivel: 60
+//     classe: "Guerreiro"
+//     vida: 120
+// jogador4:
+//     nome: "Gimli"
+//     ataque: 13
+//     nivel: 40
+//     classe: "Anão"
+//     vida: 90
+
+
+// Crie um objeto chamado "jogador1" que represente o primeiro jogador,
+// com todas as características mencionadas acima.
+
+// Crie outros três objetos, "jogador2", "jogador3" e "jogador4",
+// que representem os demais jogadores, seguindo as informações fornecidas.
+
+// Agora, vamos praticar o uso de métodos.
+
+// Crie um método chamado "atacar" para cada jogador,
+// que exiba no console uma mensagem do tipo
+// "O Mago Gandalf realizou um ataque de 130 pontos no inimigo!".
+
+// Por fim, chame o método "atacar" de cada jogador
+// e veja as mensagens sendo exibidas no console.
+
+
+
+// Desafio 11 - Objetos e RPG - Solução
+
+// const jogador1 = {
+//     nome: "Gandalf",
+//     ataque: 130,
+//     nivel: 50,
+//     classe: "Mago",
+//     vida: 100,
+//     atacar: function(){
+//         console.log(`O ${this.classe} ${this.nome} realizou um ataque de ${this.ataque} pontos no inimigo!`);
+//     }
+// }
+
+// const jogador2 = {
+//     nome: "Legolas",
+//     ataque: 12,
+//     nivel: 45,
+//     classe: "Arqueiro",
+//     vida: 80,
+//     atacar: function(){
+//         console.log(`O ${this.classe} ${this.nome} realizou um ataque de ${this.ataque} pontos no inimigo!`);
+//     }
+// }
+
+// const jogador3 = {
+//     nome: "Aragorn",
+//     ataque: 40,
+//     nivel: 60,
+//     classe: "Guerreiro",
+//     vida: 120,
+//     atacar: function(){
+//         console.log(`O ${this.classe} ${this.nome} realizou um ataque de ${this.ataque} pontos no inimigo!`);
+//     }
+// }
+
+// const jogador4 = {
+//     nome: "Gimli",
+//     ataque: 13,
+//     nivel: 40,
+//     classe: "Anão",
+//     vida: 90,
+//     atacar: function(){
+//         console.log(`O ${this.classe} ${this.nome} realizou um ataque de ${this.ataque} pontos no inimigo!`);
+//     }
+// }
+
+
+// jogador1.atacar();
+// jogador2.atacar();
+// jogador3.atacar();
+// jogador4.atacar();
+
+
+
+
+

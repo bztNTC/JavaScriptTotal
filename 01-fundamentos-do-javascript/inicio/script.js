@@ -2202,3 +2202,211 @@ var nome = "Maria";
 
 
 
+
+
+
+// Desafio 12 - Objetos e Carros
+
+
+// Crie três objetos para representar carros disponíveis para venda.
+// Utilize as seguintes informações para cada carro:
+
+// Carro 1:
+// Modelo: Ferrari
+// Ano: 2022
+// Preço: R$ 500.000
+// Vendido: Não
+
+// Carro 2:
+// Modelo: BMW
+// Ano: 2018
+// Preço: R$ 200.000
+// Vendido: Não
+
+// Carro 3:
+// Modelo: Audi
+// Ano: 2020
+// Preço: R$ 300.000
+// Vendido: Não
+
+// Agora, dentro de cada objeto de carro, crie dois métodos:
+// a) verificarPreco():
+// Este método deve verificar o preço do carro.
+// Se o preço for maior que R$ 250.000, exiba a mensagem
+// "O carro [modelo] é top de linha!".
+// Caso contrário, exiba a mensagem
+// "O carro [modelo] está com um preço acessível!".
+
+// b) verificarVendido():
+// Este método deve verificar se o carro foi vendido ou não. 
+// Se o valor da propriedade "vendido" for false, exiba a mensagem 
+// "O carro [modelo] ainda está disponível para venda.". 
+// Caso contrário, exiba a mensagem "O carro [modelo] já foi vendido!".
+// Por fim, chame os métodos de cada objeto 
+// para verificar o preço e o status de venda de cada carro.
+
+
+
+// Desafio 12 - Objetos e Carros - Solução
+
+// Criando o objeto Carro 1
+
+// const carro1 = {
+//     modelo: "Ferrari",
+//     ano: 2018,
+//     preco: 500000,
+//     vendido: true,
+//     verificarPreco: function(){
+//         if (this.preco > 250000){
+//             console.log(`O carro ${this.modelo} é top de linha!`);
+//         } else {
+//             console.log(`O carro ${this.modelo} está com um preço acessível!`);
+//         }
+//     },
+//     verificarVendido: function(){
+//         if (this.vendido === false){
+//             console.log(`O carro ${this.modelo} ainda está disponível para venda.`);
+//         } else {
+//             console.log(`O carro ${this.modelo} já foi vendido!`);
+//         }
+//     }
+
+// }
+
+// const carro2 = {
+//     modelo: "BMW",
+//     ano: 2022,
+//     preco: 200000,
+//     vendido: false,
+//     verificarPreco: function(){
+//         if (this.preco > 250000){
+//             console.log(`O carro ${this.modelo} é top de linha!`);
+//         } else {
+//             console.log(`O carro ${this.modelo} está com um preço acessível!`);
+//         }
+//     },
+//     verificarVendido: function(){
+//         if (this.vendido === false){
+//             console.log(`O carro ${this.modelo} ainda está disponível para venda.`);
+//         } else {
+//             console.log(`O carro ${this.modelo} já foi vendido!`);
+//         }
+//     }
+// }
+
+// const carro3 = {
+//     modelo: "Audi",
+//     ano: 2020,
+//     preco: 300000,
+//     vendido: false,
+//     verificarPreco: function(){
+//         if (this.preco > 250000){
+//             console.log(`O carro ${this.modelo} é top de linha!`);
+//         } else {
+//             console.log(`O carro ${this.modelo} está com um preço acessível!`);
+//         }
+//     },
+//     verificarVendido: function(){
+//         if (this.vendido === false){
+//             console.log(`O carro ${this.modelo} ainda está disponível para venda.`);
+//         } else {
+//             console.log(`O carro ${this.modelo} já foi vendido!`);
+//         }
+//     }
+// }
+
+// carro1.verificarPreco();
+// carro1.verificarVendido();
+
+// carro2.verificarPreco();
+// carro2.verificarVendido();
+
+// carro3.verificarPreco();
+// carro3.verificarVendido();
+
+
+// Estrutura de repetição For
+
+// for (let i = 1; i <= 10 ; i++){
+//     console.log( i );
+// }
+
+
+
+// Desafio 13 - Tabuada
+
+// Tabuada do 2:
+// 2 x 1 = 2
+// 2 x 2 = 4
+// 2 x 3 = 6
+// 2 x 4 = 8
+// 2 x 5 = 10
+// 2 x 6 = 12
+// 2 x 7 = 14
+// 2 x 8 = 16
+// 2 x 9 = 18
+// 2 x 10 = 20
+
+// função 3
+// Laço For
+
+
+
+// Desafio 13 - Tabuada - Solução
+// const tabuada = function(numero){
+//     console.log(`Tabuada do ${numero}:`)
+//     for(let i = 0 ; i <= 10 ; i++ ){
+//         console.log(`${numero} x ${i} = ${numero * i}`);
+//     }
+// }
+
+
+// tabuada(3);
+
+
+
+
+
+
+// Desafio 14 - Fatorial
+
+// Crie uma função calcularFatorial() que
+// calcule o fatorial de um número.
+
+// Definição de Fatorial
+// O fatorial (!) de um número n, 
+// representado por n!, 
+// é a multiplicação de n por seus antecessores
+// maiores ou iguais a 1
+
+// 0! =   1
+// 1! =   1
+// 2! =   2 x 1
+// 3! =   3 x 2 x 1
+// 4! =   4 x 3 x 2 x 1
+// 5! =   5 x 4 x 3 x 2 x 1
+// 6! =   6 x 5 x 4 x 3 x 2 x 1
+// 7! =   7 x 6 x 5 x 4 x 3 x 2 x 1
+// 8! =   8 x 7 x 6 x 5 x 4 x 3 x 2 x 1
+// 9! =   9 x 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1
+// 10! = 10 x 9 x 8 x 7 x 6 x 5 x 4 x 3 x 2 x 1
+
+// Use o laço FOR
+
+
+
+
+// Desafio 14 - Fatorial - Solução
+
+function calcularFatorial(numero){ //4
+    let calculo = 1;
+    for (let i = numero ; i >= 1  ; i-- ){ // i=0
+        calculo *= i; 
+    }
+    return calculo;
+}
+
+let fatorado = 4;
+let fatorial = calcularFatorial(fatorado);
+
+console.log(`O fatorial de ${fatorado} é ${fatorial}`);

@@ -2398,15 +2398,247 @@ var nome = "Maria";
 
 // Desafio 14 - Fatorial - Solução
 
-function calcularFatorial(numero){ //4
-    let calculo = 1;
-    for (let i = numero ; i >= 1  ; i-- ){ // i=0
-        calculo *= i; 
-    }
-    return calculo;
-}
+// function calcularFatorial(numero){ //4
+//     let calculo = 1;
+//     for (let i = numero ; i >= 1  ; i-- ){ // i=0
+//         calculo *= i; 
+//     }
+//     return calculo;
+// }
 
-let fatorado = 4;
-let fatorial = calcularFatorial(fatorado);
+// let fatorado = 4;
+// let fatorial = calcularFatorial(fatorado);
 
-console.log(`O fatorial de ${fatorado} é ${fatorial}`);
+// console.log(`O fatorial de ${fatorado} é ${fatorial}`);
+
+// Loop de Array
+
+// const frutas = [
+//     "banana",
+//     "laranja",
+//     "maçã",
+//     "morango"
+// ]
+// console.log(frutas.length);
+
+// // Loop do for para Array
+// for (let i = 0; i < frutas.length; i++){
+//     console.log(` Adicionar à salada, ${frutas[i]}`);
+// }
+
+// const automoveis = [
+//     {marca: "Toyota",     modelo: "Corolla", ano:2020},
+//     {marca: "Honda",      modelo: "Civic",   ano:2024},
+//     {marca: "Volkswagen", modelo: "Golf",    ano:2022},
+//     {marca: "Chevrolet",  modelo: "Onix",    ano:2023},
+// ]
+
+// console.log('---------------------');
+
+// for (let i = 0 ; i < automoveis.length ; i++ ){
+
+//     if (automoveis[i].marca === "Honda"){
+//         continue; // fecha o laço
+//     }
+
+//     if (automoveis[i].marca === "Chevrolet"){
+//         break; // sai do For!
+//     }
+
+    
+//     console.log(`Marca: ${automoveis[i].marca}`);
+//     console.log(`Modelo: ${automoveis[i].modelo}`);
+//     console.log(`Ano: ${automoveis[i].ano}`);
+//     console.log('---------------------');
+// }
+
+// console.log('Fim do procedimento');
+
+// // break e continue
+
+
+
+
+// // Loops Aninhados
+// for (let i = 0 ; i < 24 ; i++){
+
+//     for (let j = 0; j < 60 ; j ++){
+        
+//         for (let k = 0 ; k < 60 ; k++){
+//             console.log('Horário '+i+" "+j+" "+k);
+//         }
+//     }
+// }
+
+
+
+// Desafio 15 - Todas as Tabuadas (0 ao 10)
+
+// Tabuada do 2:
+// 2 x 1 = 2
+// 2 x 2 = 4
+// 2 x 3 = 6
+// 2 x 4 = 8
+// 2 x 5 = 10
+// 2 x 6 = 12
+// 2 x 7 = 14
+// 2 x 8 = 16
+// 2 x 9 = 18
+// 2 x 10 = 20
+
+
+
+
+//Desafio 15 - Todas as Tabuadas (0 ao 10) - Solução
+
+// for (let i = 0 ; i<=10 ; i++){
+//     console.log(`Tabuado do ${i}:`);
+
+//     for (let j = 0 ; j<=10 ; j++){
+//         console.log(`${i} x ${j} = ${i*j}`);
+//     }
+//     console.log('-------------------');
+// }
+
+
+
+
+
+
+// Desafio 16 - Tabuada reversa!
+
+// Faça o mesmo exercício de gerar as 10 tabuadas, só que de traz pra frente.
+// Começando da tabuada do 10, em 10 x 10 = 100 até a tabuada do 0, sendo o último 0 x 0 = 0
+
+
+
+// Desafio 16 - Tabuada reversa - Solução
+
+// for (let i = 10 ; i>=0 ; i--){
+//     console.log(`Tabuado do ${i}:`);
+
+//     for (let j = 10 ; j>=0 ; j--){
+//         console.log(`${i} x ${j} = ${i*j}`);
+//     }
+//     console.log('-------------------');
+// }
+
+
+
+// Loop com While
+
+// for (let i = 0 ; i<=10 ; i++ ){
+//     console.log(i);
+// }
+
+// // Definir a variável
+// let i = 0;
+
+// // verificar a condição
+// while(i<=10){
+//     console.log(i);
+
+//     // incrementar o contador
+//     i++;
+// }
+
+// // Loop de "Varrer" uma array!
+// const nomes = ["Maria", "João", "Pedro", "José"];
+
+// // for (let i = 0 ; i < nomes.length ;i++ ){
+// //     console.log(`O nome da pessoa é ${nomes[i]}`);
+// // }
+
+// let i = 0;
+// while(i < nomes.length){
+//     console.log(`Esse é o while do nome ${nomes[i]}`);
+//     i++;
+// }
+
+
+// Loop recursivo
+// for (let i = 10 ; i>=0 ; i-- ){
+//     console.log(i);
+// }
+
+// let i = 10;
+// while (i >= 0){
+//     console.log(i);
+//     i--;
+// }
+
+
+// While ou For? Qual usar? 
+
+// for (inicialização; condição; expressão final) {
+//     // código a ser executado
+// }
+
+
+// while (condição) {
+//     // código a ser executado
+// }
+
+
+// Use o laço for quando souber antecipadamente
+// quantas vezes deseja executar o código
+// e quando estiver iterando sobre uma sequência
+// conhecida, como um array.
+
+
+// Use o laço while quando o número de iterações não
+// for conhecido antecipadamente
+// ou depender de uma condição dinâmica
+// que pode mudar ao longo do tempo.
+// Como por exemplo para fazer um login ou monitoramento
+
+// let continuarMonitorando = true;
+
+// while (continuarMonitorando){
+//     // Similar monitoramento
+//     console.log("novos eventos de monitoramento..." + Math.random());
+
+//     const resposta = prompt("Deseja continuar monitorando? (s/n)");
+
+//     if (resposta !== "s"){
+//         continuarMonitorando = false;
+//         console.log("monitoramento encerrado");
+//     }
+
+// }
+
+// console.log("saiu do laço");
+
+
+
+
+
+// Desafio 17 - Contagem de voltas
+
+// Vamos montar um sistema de contagem de voltas.
+// Vamos ter uma variável para contar as voltas.
+// Vamos ter uma outra para o total de voltas.
+// Em cada volta, vamos apresentar a mensagem:
+
+// Você está na volta 3
+
+// E quando terminar, vamos dizer:
+
+// Parabéns!
+// Você completou todas as voltas da corrida!
+
+// 10 voltas
+// While
+
+
+// Desafio 17 - Contagem de voltas - Solução
+
+// const totalDeVoltas = 10;
+// let voltaAtual = 1;
+// while (voltaAtual <= totalDeVoltas){
+//     console.log(`Você está na volta ${voltaAtual}`);
+//     voltaAtual++;
+// }
+
+// console.log(`Parabéns!`);
+// console.log(`Você completou todas as voltas da corrida!`);

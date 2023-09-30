@@ -2525,6 +2525,33 @@ var nome = "Maria";
 
 
 
+
+
+//  "for...of" loop
+// const numeros = [2,4,6,8,10,12];
+
+// for (let numero of numeros){
+//     console.log(numero)
+// }
+
+// // Exemplo 2
+// const frutas = ["maça","banana","laranja"];
+// for (let fruta of frutas ){
+//     console.log('Eu gosto de ',fruta);
+// }
+
+// Exemplo 3
+const cores = ["verde","amarelo","azul"];
+for (let cor of cores){
+    console.log('A cor é ',cor);
+}
+
+
+
+
+
+
+
 // Loop com While
 
 // for (let i = 0 ; i<=10 ; i++ ){
@@ -2633,7 +2660,7 @@ var nome = "Maria";
 
 // Desafio 17 - Contagem de voltas - Solução
 
-// const totalDeVoltas = 10;
+// const totalDeVoltas = 12;
 // let voltaAtual = 1;
 // while (voltaAtual <= totalDeVoltas){
 //     console.log(`Você está na volta ${voltaAtual}`);

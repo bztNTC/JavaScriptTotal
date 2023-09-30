@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Seven Eleven Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Seven Eleven Game</h1>
+      <div class="turn-indicator">
+        <p id="turn-text">Turno do jogador 1</p>
+      </div>
+      <div class="dice-container">
+        <div class="player">
+          <h2>Player 1</h2>
+          <div class="dice" id="player1-dice">
+            <!-- Resultado do dado do jogador 1 aparecerá aqui -->
+          </div>
+          <p>Score: <span id="player1-score">0</span></p>
+        </div>
+        <div class="player">
+          <h2>Player 2</h2>
+          <div class="dice" id="player2-dice">
+            <!-- Resultado do dado do jogador 2 aparecerá aqui -->
+          </div>
+          <p>Score: <span id="player2-score">0</span></p>
+        </div>
+      </div>
+      <button id="roll-button">Lançar Dados</button>
+      <button id="reset-button">Recomeçar</button>
+      <p id="winner-text"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

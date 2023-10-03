@@ -1,101 +1,93 @@
-// Obtém a referência ao botão "Limpar" pelo seu ID
-const botaoLimpar = document.getElementById("limpar");
+"use strict"; // Define o modo estrito para evitar erros comuns.
 
-// Adiciona um ouvinte de eventos para o clique no botão "Limpar"
-botaoLimpar.addEventListener("click", function () {
-  // Chama a função para limpar os elementos específicos
-  limparElemento(document.getElementById("historyText"));
-  limparElemento(document.getElementById("value-to-convert"));
-  limparElemento(document.getElementById("result"));
+// Dry
+
+// Capturar os elementos
+const historyText = document.getElementById("historyText");
+const result = document.getElementById("result");
+const convertButton = document.getElementById("convert-button");
+const clearButton = document.getElementById("clear-button");
+const unitSelector = document.getElementById("unit-selector");
+
+// Mapear o click do botão de limpeza
+clearButton.addEventListener("click", function () {
+  historyText.innerText = "";
+  result.innerText = "";
+  document.getElementById("value-to-convert").value = "";
+  unitSelector.options.selectedIndex = 0;
 });
 
-// Função para limpar um elemento, seja ele um campo de entrada ou uma área de texto
-function limparElemento(elemento) {
-  // Limpa os valores de campos de entrada
-  elemento.value = "";
+// Mapear o evento do Click
+convertButton.addEventListener("click", function () {
+  const valueToConvert = parseFloat(
+    document.getElementById("value-to-convert").value
+  );
 
-  // Limpa os textos de áreas de texto
-  elemento.innerText = "";
-}
-
-// Função para realizar a conversão com base no valor e na unidade selecionada
-function realizarConversao(valor, unidade) {
-  let resultado;
-
-  // Realiza a conversão com base na unidade selecionada
-  switch (unidade) {
-    case "cm":
-      resultado = valor * 0.393701;
-      break;
-    case "in":
-      resultado = valor * 2.54;
-      break;
-    case "m":
-      resultado = valor * 39.3701;
-      break;
-    case "ft":
-      resultado = valor * 30.48;
-      break;
-    default:
-      resultado = "Unidade não suportada";
+  if (valueToConvert === 0 || valueToConvert === "" || isNaN(valueToConvert)) {
+    result.textContent = "Informe um valor diferente de zero";
+    result.classList.remove("blueMessage");
+    result.classList.add("redMessage");
+    return;
   }
 
-  return resultado;
-}
+  function refreshScreen(valueToConvert, calculated, unit, unitOrigin) {
+    result.classList.remove("redMessage");
+    result.classList.add("blueMessage");
+    result.textContent = ` ${valueToConvert} ${unitOrigin} é igual a ${calculated.toFixed(
+      2
+    )} ${unit}`;
+    historyText.innerText = historyText.innerText + "\n" + result.textContent;
+  }
 
-// Adiciona um ouvinte de eventos para o clique no botão de conversão
-document
-  .getElementById("convert-button")
-  .addEventListener("click", function () {
-    // Obtém o valor a ser convertido do campo de entrada
-    const valorParaConverter = parseFloat(
-      document.getElementById("value-to-convert").value
-    );
+  let calculated;
 
-    // Obtém a unidade selecionada a partir do seletor de unidades
-    const unitSelector = document.getElementById("unit-selector");
-    const selectedUnit = unitSelector.options[unitSelector.selectedIndex].value;
+  switch (unitSelector.value) {
+    case "cm":
+      // lógica caso o valor seja CM
+      calculated = valueToConvert * 0.393701;
+      refreshScreen(
+        valueToConvert,
+        calculated,
+        "polegadas",
+        unitSelector.value
+      );
+      break;
 
-    // Exibe informações no console para fins de depuração
-    console.log(valorParaConverter, unitSelector, selectedUnit);
+    case "in":
+      // lógica caso o valor seja In
+      calculated = valueToConvert * 2.54;
+      refreshScreen(
+        valueToConvert,
+        calculated,
+        "centímetros",
+        unitSelector.value
+      );
+      break;
 
-    // Verifica se o valor é igual a zero ou se não é um número (NaN)
-    if (valorParaConverter == 0 || isNaN(valorParaConverter)) {
-      // Obtém o elemento de resultado
-      const resultadoElemento = document.getElementById("result");
+    case "m":
+      // lógica caso o valor seja M
+      calculated = valueToConvert * 39.3701;
+      refreshScreen(
+        valueToConvert,
+        calculated,
+        "polegadas",
+        unitSelector.value
+      );
+      break;
 
-      // Define o texto de erro e atualiza as classes de estilo
-      resultadoElemento.textContent = "Escolha um valor diferente de zero";
-      resultadoElemento.classList.remove("normalMessage");
-      resultadoElemento.classList.add("errorMessage");
-    } else {
-      // Realiza a conversão com base na função realizarConversao
-      const resultado = realizarConversao(valorParaConverter, selectedUnit);
+    case "ft":
+      // lógica caso o valor seja FT
+      calculated = valueToConvert * 30.48;
+      refreshScreen(
+        valueToConvert,
+        calculated,
+        "centímetros",
+        unitSelector.value
+      );
+      break;
 
-      // Exibe informações no console para fins de depuração
-      console.log(resultado);
-
-      // Obtém o elemento de resultado
-      const resultadoElemento = document.getElementById("result");
-
-      // Define o texto do resultado com base na unidade selecionada
-      let text = ` ${valorParaConverter} ${selectedUnit} é igual a ${resultado.toFixed(
-        2
-      )}`;
-
-      // Verifica a unidade selecionada e ajusta o texto em conformidade
-      if (selectedUnit == "cm" || selectedUnit == "m") {
-        text = text + " polegadas";
-      } else {
-        text = text + " centímetros";
-      }
-
-      // Define o texto do resultado e do histórico
-      resultadoElemento.textContent = text;
-
-      // Atualiza o histórico de conversões
-      const historyText = document.getElementById("historyText");
-      historyText.innerText =
-        historyText.innerText + "\n" + resultadoElemento.textContent;
-    }
-  });
+    default:
+      // Nenhuma das opções
+      result.textContent = `Selecione uma opção válida`;
+  }
+});

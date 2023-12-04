@@ -16,6 +16,14 @@ let player1Total = 0; // inicia a pontuação total do Jogador 1
 let player2Total = 0; // inicia a pontuação total do Jogador 2
 let currentPlayer = 1; // Jogador atual
 
+// Dry
+function endGame() {
+  turnText.style.color = "red";
+  // Esconder o botão jogar dados
+  rollButton.style.display = "none";
+  rollButton.disabled = true;
+}
+
 resetButton.addEventListener("click", resetGame);
 
 function resetGame() {
@@ -61,26 +69,17 @@ rollButton.addEventListener("click", () => {
     // Verificar se o jogador 1 perdeu
     if (sum === 7 || sum === 11) {
       turnText.innerText = "O Jogador 1 perdeu";
-      turnText.style.color = "red";
-      // Esconder o botão jogar dados
-      rollButton.style.display = "none";
-      rollButton.disabled = true;
+      endGame();
     } else {
       if (player1Total >= 20) {
         turnText.innerText = "O Jogador 1 venceu";
-        turnText.style.color = "red";
-        // Esconder o botão jogar dados
-        rollButton.style.display = "none";
-        rollButton.disabled = true;
+        endGame();
         return;
       }
 
       if (roll1 === roll2) {
         turnText.innerText = "O Jogador 1 venceu - Regra dupla vantagem";
-        turnText.style.color = "red";
-        // Esconder o botão jogar dados
-        rollButton.style.display = "none";
-        rollButton.disabled = true;
+        endGame();
         return;
       }
       // Passar o turno para o Jogador 2
@@ -96,25 +95,16 @@ rollButton.addEventListener("click", () => {
     // Verificar se o jogador 2 perdeu
     if (sum === 7 || sum === 11) {
       turnText.innerText = "O Jogador 2 perdeu";
-      turnText.style.color = "red";
-      // Esconder o botão jogar dados
-      rollButton.style.display = "none";
-      rollButton.disabled = true;
+      endGame();
     } else {
       if (player2Total >= 20) {
         turnText.innerText = "O Jogador 2 venceu";
-        turnText.style.color = "red";
-        // Esconder o botão jogar dados
-        rollButton.style.display = "none";
-        rollButton.disabled = true;
+        endGame();
         return;
       }
       if (roll1 === roll2) {
         turnText.innerText = "O Jogador 2 venceu - Regra dupla vantagem";
-        turnText.style.color = "red";
-        // Esconder o botão jogar dados
-        rollButton.style.display = "none";
-        rollButton.disabled = true;
+        endGame();
         return;
       }
       // Passar o turno para o Jogador 1

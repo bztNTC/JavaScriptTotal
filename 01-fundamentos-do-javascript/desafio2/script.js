@@ -10,7 +10,7 @@ const atleta1PontuacaoFinal = (0.72 * atleta1Corrida100Metros) + (3.79 * atleta1
 //Dados do atleta 2
 const atleta2Nome = "Pedro Silva";
 const atleta2Corrida100Metros = 11.8;
-const atleta2SaltoEmAltura = 1.;
+const atleta2SaltoEmAltura = 1.6;
 const atleta2ArremessoDePeso = 9.8;
 const atleta2SaltoEmDistancia = 6.2;
 const atleta2Corrida800Metros = 145;
